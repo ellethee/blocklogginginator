@@ -16,7 +16,7 @@ class TestBlocklogginginator(unittest.TestCase):
         """
         Simple test.
         """
-        print "#" * 5, "Simple example", "#" * 5
+        print ("#" * 5, "Simple example", "#" * 5)
         with logblock(name='one second'):
             time.sleep(1)
 
@@ -24,7 +24,7 @@ class TestBlocklogginginator(unittest.TestCase):
         """
         Nested blocks
         """
-        print "#" * 5, "Nested blocks", "#" * 5
+        print ("#" * 5, "Nested blocks", "#" * 5)
         with logblock(name='first blcok'):
             time.sleep(0.5)
             with logblock(name='second block'):
@@ -36,7 +36,7 @@ class TestBlocklogginginator(unittest.TestCase):
         """
         Recursive.
         """
-        print "#" * 5, "Recursive blocks with logging", "#" * 5
+        print ("#" * 5, "Recursive blocks with logging", "#" * 5)
         import logging
         import blocklogginginator
         logging.basicConfig(
@@ -75,3 +75,7 @@ class TestBlocklogginginator(unittest.TestCase):
                     return recursive(number - 1)
         recursive(5)
         blocklogginginator.reset_to_defaults()
+
+
+if __name__ == '__main__':
+    unittest.main()

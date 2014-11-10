@@ -4,7 +4,7 @@ A silly class to logging blocks execution time.
 """
 __file_name__ = "blocklogginginator.py"
 __author__ = "ellethee <ellethee@altervista.org>"
-__version__ = "1.0.2"
+__version__ = "1.0.5"
 __date__ = "2013-01-15"
 
 import time
@@ -15,7 +15,7 @@ def lbprint(message):
     """
     A default to print a message.
     """
-    print message
+    print (message)
 
 """
 We use the _<NAME> to keep track of the original value.
